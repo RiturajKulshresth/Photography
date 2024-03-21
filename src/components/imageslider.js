@@ -7,7 +7,7 @@ import ModalContent from "./ModalContent";
 class ImageSlider extends Component {
   state = {
     currentImageIndex: 0,
-    backgroundImageUrl: images.length > 0 ? images[0].src : "",
+    backgroundImageUrl: images.length > 0 ? images[0].small : "",
     isModalOpen: false,
     isEventListenerActive: true,
   };
@@ -16,7 +16,7 @@ class ImageSlider extends Component {
     const backgroundElement = document.getElementById("background-image");
     backgroundElement.classList.add("fade-out");
     setTimeout(() => {
-      backgroundElement.style.backgroundImage = `url(${images[index].src})`;
+      backgroundElement.style.backgroundImage = `url(${images[index].small})`;
       backgroundElement.classList.remove("fade-out");
     }, 500); // Adjust the delay to match the transition duration
   };
@@ -94,7 +94,7 @@ class ImageSlider extends Component {
 
     this.setState({ currentImageIndex: closestIndex });
     this.setState({
-      backgroundImageUrl: images[this.state.currentImageIndex].src,
+      backgroundImageUrl: images[this.state.currentImageIndex].small,
     });
   };
 
@@ -143,7 +143,7 @@ class ImageSlider extends Component {
   render() {
     const { currentImageIndex, isModalOpen } = this.state;
     const backgroundImageUrl =
-      images.length > 0 ? images[currentImageIndex].src : "";
+      images.length > 0 ? images[currentImageIndex].small : "";
 
     // document.body.style.transition = "background-image 0.3s ease";
 
@@ -161,7 +161,7 @@ class ImageSlider extends Component {
             <img
               key={index}
               className="image"
-              src={image.src}
+              src={image.regular}
               draggable="false"
               alt={image.alt}
               onClick={() => {
@@ -183,7 +183,8 @@ class ImageSlider extends Component {
           }}
         >
           <ModalContent
-            imageUrl={this.state.backgroundImageUrl}
+            // imageUrl={this.state.backgroundImageUrl}
+            imageUrl={images[currentImageIndex].full}
             onClose={this.closeModal}
           />
         </Modal>
