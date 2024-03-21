@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import ProfileImage from "../images/Profile.jpg";
 
-const pages = ["Photography"];
+const pages = ["Portfolio"];
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -101,6 +101,7 @@ function ResponsiveAppBar() {
               <MenuItem
                 key={page}
                 onClick={handleCloseNavMenu}
+                href="https://riturajkulshresth.vercel.app/"
                 sx={{ color: "white" }}
               >
                 <Typography textAlign="center">{page}</Typography>
@@ -133,6 +134,7 @@ function ResponsiveAppBar() {
             <Button
               key={page}
               onClick={handleCloseNavMenu}
+              href="https://riturajkulshresth.vercel.app/"
               sx={{ my: 2, color: "white", display: "block" }}
             >
               {page}
