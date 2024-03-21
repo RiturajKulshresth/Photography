@@ -15,7 +15,7 @@ import ProfileImage from "../images/Profile.jpg";
 // const pages = ["Photography", "Portfolio"];
 
 const pages = [
-    { label: "Photography", link: "#app-bar-with-responsive-menu" },
+    // { label: "Photography", link: "#app-bar-with-responsive-menu" },
     { label: "Portfolio", link: "https://riturajkulshresth.github.io/" }
   ];
 
@@ -53,7 +53,6 @@ function ResponsiveAppBar() {
           variant="h6"
           noWrap
           component="a"
-          href="#app-bar-with-responsive-menu"
           sx={{
             mr: 2,
             display: { xs: "none", md: "flex" },
