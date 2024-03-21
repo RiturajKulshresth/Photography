@@ -20,6 +20,7 @@ class ImageSlider extends Component {
       backgroundElement.classList.remove("fade-out");
     }, 500); // Adjust the delay to match the transition duration
   };
+  
   openModal = () => {
     this.setState({ isModalOpen: true });
     this.setState({ isEventListenerActive: false });
@@ -100,11 +101,8 @@ class ImageSlider extends Component {
 
   componentDidMount() {
     this.addEventListeners();
-    // document.body.style.transition = "background-image 0.3s ease";
-    // if (this.state.backgroundImageUrl !== "") {
-    //   document.body.style.backgroundImage = `url(${this.state.backgroundImageUrl})`;
-    // }
   }
+
   componentDidUpdate(prevProps, prevState) {
     // Check if modal state has changed and update event listener accordingly
     if (prevState.isModalOpen !== this.state.isModalOpen) {
@@ -114,9 +112,6 @@ class ImageSlider extends Component {
         this.addEventListeners();
       }
     }
-    // if (prevState.backgroundImageUrl !== this.state.backgroundImageUrl) {
-    //   document.body.style.backgroundImage = `url(${this.state.backgroundImageUrl})`;
-    // }
   }
 
   componentWillUnmount() {
@@ -131,6 +126,7 @@ class ImageSlider extends Component {
     window.addEventListener("mousemove", this.handleOnMove);
     window.addEventListener("touchmove", this.handleOnMove);
   };
+
   removeEventListeners = () => {
     window.removeEventListener("mousedown", this.handleOnDown);
     window.removeEventListener("touchstart", this.handleOnDown);
@@ -144,10 +140,6 @@ class ImageSlider extends Component {
     const { currentImageIndex, isModalOpen } = this.state;
     const backgroundImageUrl =
       images.length > 0 ? images[currentImageIndex].small : "";
-
-    // document.body.style.transition = "background-image 0.3s ease";
-
-    // document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
 
     return (
       <div className="container">
