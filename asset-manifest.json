@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/photography/static/css/main.cb0b80b3.css",
+    "main.js": "/photography/static/js/main.24e6cd7d.js",
+    "static/js/453.f33c0dc2.chunk.js": "/photography/static/js/453.f33c0dc2.chunk.js",
+    "static/media/Profile.jpg": "/photography/static/media/Profile.7774a82c0a75e4790272.jpg",
+    "index.html": "/photography/index.html",
+    "main.cb0b80b3.css.map": "/photography/static/css/main.cb0b80b3.css.map",
+    "main.24e6cd7d.js.map": "/photography/static/js/main.24e6cd7d.js.map",
+    "453.f33c0dc2.chunk.js.map": "/photography/static/js/453.f33c0dc2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb0b80b3.css",
+    "static/js/main.24e6cd7d.js"
+  ]
+}
