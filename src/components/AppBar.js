@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
-import ProfileImage from '../images/Profile.jpg';
+import ProfileImage from "../images/Profile.jpg";
 
 // const pages = ["Products", "Pricing", "Blog"];
 const pages = ["Photography"];
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
             ))}
           </Menu>
         </Box>
-        <PhotoCameraIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1, }} />
+        <PhotoCameraIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
         {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
         <Typography
           variant="h5"

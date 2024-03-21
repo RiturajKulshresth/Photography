@@ -1,12 +1,12 @@
-import { AppBar } from '@mui/material';
-import './App.css';
-import ImageSlider from './components/imageslider';
-import ResponsiveAppBar from './components/AppBar';
+import { AppBar } from "@mui/material";
+import "./App.css";
+import ImageSlider from "./components/imageslider";
+import ResponsiveAppBar from "./components/AppBar";
 
 function App() {
   return (
     <div className="App">
-      <ResponsiveAppBar/>
+      <ResponsiveAppBar />
       <ImageSlider />
       {/* Other components or content */}
     </div>

@@ -174,7 +174,7 @@ class ImageSlider extends Component {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            paddingTop: "10px"
+            paddingTop: "10px",
           }}
         >
           <ModalContent
