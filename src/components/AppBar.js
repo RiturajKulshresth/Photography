@@ -12,7 +12,12 @@ import MenuItem from "@mui/material/MenuItem";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import ProfileImage from "../images/Profile.jpg";
 
-const pages = ["Photography"];
+// const pages = ["Photography", "Portfolio"];
+
+const pages = [
+    { label: "Photography", link: "#app-bar-with-responsive-menu" },
+    { label: "Portfolio", link: "https://riturajkulshresth.github.io/" }
+  ];
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -99,11 +104,12 @@ function ResponsiveAppBar() {
           >
             {pages.map((page) => (
               <MenuItem
-                key={page}
+                key={page.label}
                 onClick={handleCloseNavMenu}
+                href={page.link}
                 sx={{ color: "white" }}
               >
-                <Typography textAlign="center">{page}</Typography>
+                <Typography textAlign="center">{page.label}</Typography>
               </MenuItem>
             ))}
           </Menu>
@@ -131,11 +137,12 @@ function ResponsiveAppBar() {
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
           {pages.map((page) => (
             <Button
-              key={page}
+              key={page.label}
+              href={page.link}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              {page}
+              {page.label}
             </Button>
           ))}
         </Box>
