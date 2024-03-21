@@ -29,6 +29,7 @@
   /* Position relative is necessary for pseudo-element positioning */
   position: relative;
   transition: background-image 0.5s ease;
+  background-color: black;
 }
 
 .background-image.fade-out {
