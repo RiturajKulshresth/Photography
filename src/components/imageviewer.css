@@ -1,0 +1,43 @@
+.image-viewer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it appears on top of other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-viewer-modal {
+    background-color: #fff; /* White background for the modal */
+    border: 2px solid #000; /* Black border */
+    padding: 20px;
+    max-width: 90%; /* Adjust as needed */
+    max-height: 90%; /* Adjust as needed */
+    overflow: auto; /* Allow scrolling if image is larger than modal */
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Reset width to auto to adjust dynamically */
+    height: auto; /* Reset height to auto to adjust dynamically */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
