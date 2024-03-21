@@ -1,4 +1,3 @@
-import { AppBar } from "@mui/material";
 import "./App.css";
 import ImageSlider from "./components/imageslider";
 import ResponsiveAppBar from "./components/AppBar";
