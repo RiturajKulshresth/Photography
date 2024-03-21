@@ -20,7 +20,7 @@ class ImageSlider extends Component {
       backgroundElement.classList.remove("fade-out");
     }, 500); // Adjust the delay to match the transition duration
   };
-  
+
   openModal = () => {
     this.setState({ isModalOpen: true });
     this.setState({ isEventListenerActive: false });
@@ -33,7 +33,8 @@ class ImageSlider extends Component {
 
   handleOnDown = (e) => {
     const track = document.getElementById("image-track");
-    track.dataset.mouseDownAt = e.clientX;
+    const touch = e.type === "touchstart" ? e.changedTouches[0] : e;
+    track.dataset.mouseDownAt = touch.clientX;
     document.body.classList.add("blur-background");
   };
 
@@ -45,9 +46,10 @@ class ImageSlider extends Component {
 
   handleOnMove = (e) => {
     const track = document.getElementById("image-track");
+    const touch = e.type === "touchmove" ? e.changedTouches[0] : e;
     if (track.dataset.mouseDownAt === "0") return;
 
-    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - touch.clientX,
       maxDelta = window.innerWidth / 2;
 
     const percentage = (mouseDelta / maxDelta) * -100,
@@ -167,11 +169,12 @@ class ImageSlider extends Component {
           open={isModalOpen}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
-          disableBackdropClick
+          //   disableBackdropClick
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            paddingTop: "10px"
           }}
         >
           <ModalContent
